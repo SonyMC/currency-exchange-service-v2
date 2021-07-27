@@ -29,6 +29,8 @@ public class CurrencyExchangeController {
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchangeBean retrieveExchangeValue(@PathVariable String from, @PathVariable String to){
 		
+		
+		logger.info("Retrieve Exchange Value call with{} to {}",from,to);
 		// Hard coded E.g.
 		// CurrencyExchangeBean exchangeValue	= new CurrencyExchangeBean(100L, from, to, BigDecimal.valueOf(65));
 
@@ -45,7 +47,7 @@ public class CurrencyExchangeController {
 		
 
 		
-		logger.info("{}",exchangeValue);
+		
 		 return exchangeValue;
 		
 		

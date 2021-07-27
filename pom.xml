@@ -50,7 +50,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>	
-						
+<!--  Dependencies for Sleuth, Zipkin and Rabbit MQ -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+    		<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-zipkin</artifactId>
+    		<version>2.2.8.RELEASE</version>
+		</dependency>
+ 		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+		</dependency>							
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -105,6 +118,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+<!--  maven plugin is also used to create an image for our container -->				
+				<configuration>
+					<image>
+						<name>mailsonymathew/mmv2-${project.artifactId}:${project.version}</name>
+					</image>
+					<pullPolicy>IF_NOT_PRESENT</pullPolicy>
+				</configuration>				
 			</plugin>
 		</plugins>
 	</build>
