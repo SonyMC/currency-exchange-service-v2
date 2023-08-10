@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mailsonymathew.microservices</groupId>
-	<artifactId>currency-exchange-service-v2</artifactId>
+	<artifactId>currency-exchange-service-v3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>currency-exchange-service-v2</name>
+	<name>currency-exchange-service-v3</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
